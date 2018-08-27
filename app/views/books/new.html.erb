@@ -1,6 +1,6 @@
 <h1>Books#new</h1>
 
-<%= form_with scope: :book, local: true do |form| %>
+<%= form_with scope: :book, url: books_path, local: true do |form| %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
