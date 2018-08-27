@@ -1,2 +1,18 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<main>
+  <h1>Index</h1>
+  <% @books.each do |book| %>
+    <%= link_to book do %>
+      <div class="book_tile">
+        <h2 class="book_tile_title"><%= book.title %></h2>
+        <p class="book_tile_author"><%= book.author %></p>
+        <nav>
+          <ul class="book_tile_nav">
+            <li>edit</li>
+            <li>delete</li>
+            <a href="<%= book.url %>"><li>direct link</li></a>
+          </ul>
+        </nav>
+      </div>
+    <% end %>
+  <% end %>
+<main>

@@ -1,3 +1,64 @@
 // Place all the styles related to the Books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+:root {
+  --main-bg-color: #40798C;
+  --tile-text-color: #40798C;
+  --tile-title-color: #FF8811;
+  --tile-bg-color: #FFF8F0;
+  --tile-button-color: #FFF8F0;
+}
+
+main{
+  margin: 10px auto;
+  max-width: 1056px;
+}
+
+h1{
+  color: var(--tile-title-color);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 60px;
+}
+
+body {
+  background-color: var(--main-bg-color)
+}
+
+.book_tile {
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  background-color: var(--tile-bg-color);
+}
+
+.book_tile_title {
+  color: var(--tile-title-color);
+  margin: 14px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.book_tile_author {
+  color: var(--tile-text-color);
+  margin: 14px;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.book_tile_nav {
+  list-style: none;
+  padding: 0;
+  margin: 14px;
+}
+
+.book_tile_nav li {
+  display: inline-block;
+  background-color: var(--tile-text-color);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--tile-button-color);
+  padding: 7px;
+  border-radius: 7px;
+  margin-right: 10px;
+}
