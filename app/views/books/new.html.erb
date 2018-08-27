@@ -1,2 +1,32 @@
 <h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+
+<%= form_with scope: :book, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+ 
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.label :url %><br>
+    <%= form.url_field :url %>
+  </p>
+
+  <p>
+    <%= form.label :img_url %><br>
+    <%= form.url_field :img_url %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
