@@ -8,6 +8,7 @@ class BooksController < ApplicationController
   end
 
   def new
+    @book = Book.new
   end
 
   def edit
@@ -16,14 +17,20 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.save
-    redirect_to @book
+    if @book.save
+      redirect_to @book
+    else
+      render 'new'
+    end
   end
 
   def update
     @book = Book.find(params[:id])
-    @book.update(book_params)
-    redirect_to @book
+    if @book.update(book_params)
+      redirect_to @book
+    else
+      render 'edit'
+    end
   end
 
   private
