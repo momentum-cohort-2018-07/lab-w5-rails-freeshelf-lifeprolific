@@ -1,7 +1,7 @@
 <main>
   <div class="book_show_tile">
     <h1><%= @book.title %></h1>
-    <span class="show-text"><%= @book.author %></span>
+    <span class="show-text">author: <%= @book.author %></span>
     <p class="show-text"><%= @book.description %></p>
       <nav>
       <ul class="book_tile_nav">
@@ -21,6 +21,7 @@
         <%= link_to books_path do %>
           <li>back to index</li>
         <% end %>
+        <span class="show-text">added by: <%= @user.username %></span>
         
       </ul>
     </nav>
