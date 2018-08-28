@@ -7,7 +7,9 @@
         <p class="book_tile_author"><%= book.author %></p>
         <nav>
           <ul class="book_tile_nav">
-            <li>edit</li>
+            <%= link_to edit_book_path(book) do %>
+              <li>edit</li>
+            <% end %>
             <li>delete</li>
             <a href="<%= book.url %>"><li>direct link</li></a>
           </ul>
