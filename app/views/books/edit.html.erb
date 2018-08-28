@@ -1,2 +1,37 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<main>
+<h1>Edit Book</h1>
+  <div class="book_show_tile">
+
+<%= form_with model: @book, local: true do |form| %>
+  <div class="input-block">
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="input-block">
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </div>
+ 
+  <div class="input-block">
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="input-block">
+    <%= form.label :url %><br>
+    <%= form.url_field :url %>
+  </div>
+
+  <div class="input-block">
+    <%= form.label :img_url %><br>
+    <%= form.url_field :img_url %>
+  </div>
+ 
+  <div class="input-block">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+  <div>
+</main>

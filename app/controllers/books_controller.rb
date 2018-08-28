@@ -11,12 +11,19 @@ class BooksController < ApplicationController
   end
 
   def edit
+    @book = Book.find(params[:id])
   end
 
   def create
     @book = Book.new(book_params)
     @book.save
     redirect_to @book
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    @article.update(article_params)
+    redirect_to @article
   end
 
   private
