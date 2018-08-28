@@ -10,7 +10,9 @@
           <li>edit</li>
         <% end %>
 
-        <%= link_to book_path do %>
+        <%= link_to book_path(@book),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } do %>
           <li>delete</li>
         <% end %>
 

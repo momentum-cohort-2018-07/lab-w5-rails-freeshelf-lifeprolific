@@ -10,7 +10,11 @@
             <%= link_to edit_book_path(book) do %>
               <li>edit</li>
             <% end %>
+            <%= link_to book_path(book),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } do %>
             <li>delete</li>
+            <% end %>
             <a href="<%= book.url %>"><li>direct link</li></a>
           </ul>
         </nav>
