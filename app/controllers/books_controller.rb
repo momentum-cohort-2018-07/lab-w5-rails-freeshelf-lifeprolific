@@ -21,9 +21,9 @@ class BooksController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
-    @article.update(article_params)
-    redirect_to @article
+    @book = Book.find(params[:id])
+    @book.update(book_params)
+    redirect_to @book
   end
 
   private

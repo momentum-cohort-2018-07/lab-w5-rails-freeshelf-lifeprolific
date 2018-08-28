@@ -1,7 +1,9 @@
 <main>
   <div class="book_show_tile">
     <h1><%= @book.title %></h1>
-    <nav>
+    <span class="show-text"><%= @book.author %></span>
+    <p class="show-text"><%= @book.description %></p>
+      <nav>
       <ul class="book_tile_nav">
 
         <%= link_to edit_book_path do %>
@@ -20,6 +22,5 @@
         
       </ul>
     </nav>
-    <p class="show-text"><%= @book.description %></p>
   <div>
 </main>
