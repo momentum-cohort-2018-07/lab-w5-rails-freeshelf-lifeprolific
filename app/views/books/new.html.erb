@@ -1,32 +1,37 @@
-<h1>Books#new</h1>
+<main>
+<h1>New Book</h1>
+  <div class="book_show_tile">
 
 <%= form_with scope: :book, url: books_path, local: true do |form| %>
-  <p>
+  <div class="input-block">
     <%= form.label :title %><br>
     <%= form.text_field :title %>
-  </p>
+  </div>
 
-  <p>
+  <div class="input-block">
     <%= form.label :author %><br>
     <%= form.text_field :author %>
-  </p>
+  </div>
  
-  <p>
+  <div class="input-block">
     <%= form.label :description %><br>
     <%= form.text_area :description %>
-  </p>
+  </div>
 
-  <p>
+  <div class="input-block">
     <%= form.label :url %><br>
     <%= form.url_field :url %>
-  </p>
+  </div>
 
-  <p>
+  <div class="input-block">
     <%= form.label :img_url %><br>
     <%= form.url_field :img_url %>
-  </p>
+  </div>
  
-  <p>
+  <div class="input-block">
     <%= form.submit %>
-  </p>
+  </div>
 <% end %>
+
+  <div>
+</main>

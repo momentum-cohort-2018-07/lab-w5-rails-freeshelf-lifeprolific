@@ -1,3 +1,15 @@
-<a href="<%= @book.url %>"><h1><%= @book.title %></h1></a>
-<img src="<%= @book.img_url %>">
-<p><%= @book.description %></p>
+<main>
+  <div class="book_show_tile">
+    <img src="<%= @book.img_url %>" class="show-book-img">
+    <h1><%= @book.title %></h1>
+    <nav>
+      <ul class="book_tile_nav">
+        <a href="<%= @book.url %>"><li>edit</li></a>
+        <a href="<%= @book.url %>"><li>delete</li></a>
+        <a href="<%= @book.url %>"><li>direct link</li></a>
+        <a href="<%= @book.url %>"><li>back to index</li></a>
+      </ul>
+    </nav>
+    <p class="show-text"><%= @book.description %></p>
+  <div>
+</main>
