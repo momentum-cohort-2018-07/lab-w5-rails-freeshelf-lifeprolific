@@ -18,6 +18,9 @@
             <a href="<%= book.url %>"><li>direct link</li></a>
           </ul>
         </nav>
+        <% if book.checked_out %>
+          <p class="book_tile_author">checked out</p>
+        <% end %>
       </div>
     <% end %>
   <% end %>
