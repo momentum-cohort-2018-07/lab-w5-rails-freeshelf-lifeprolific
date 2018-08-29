@@ -8,7 +8,11 @@ class BooksController < ApplicationController
   end
 
   def new
-    @book = Book.new
+    if current_user
+      @book = Book.new
+    else
+      redirect_to books_path
+    end
   end
 
   def edit
@@ -16,11 +20,16 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(book_params)
-    if @book.save
-      redirect_to @book
+
+    if current_user
+      @book = Book.new(book_params)
+      if @book.save
+        redirect_to @book
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      redirect_to books_path
     end
   end
 
