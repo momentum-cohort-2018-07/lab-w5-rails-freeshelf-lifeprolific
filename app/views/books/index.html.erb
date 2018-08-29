@@ -14,7 +14,7 @@
         <p class="book_tile_author"><%= book.author %></p>
         <nav>
           <ul class="book_tile_nav">
-            <% if current_user %>
+            <% if current_user == book.user %>
               <%= link_to edit_book_path(book) do %>
                 <li>edit</li>
               <% end %>
