@@ -21,7 +21,7 @@
         <%= link_to books_path do %>
           <li>back to index</li>
         <% end %>
-        <span class="show-text">added by: <%= @user.username %></span>
+        <span class="show-text">added by: <%= @book.user.username %></span>
         
       </ul>
     </nav>
