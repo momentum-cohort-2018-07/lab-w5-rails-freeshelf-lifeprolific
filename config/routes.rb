@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'users/register'
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :session, only: [:new, :create, :destroy]
   resources :users, only: [:register, :create]
   resources :books
   

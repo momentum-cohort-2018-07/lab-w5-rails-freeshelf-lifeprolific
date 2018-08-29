@@ -1,6 +1,12 @@
 <main>
   <h1>Index</h1>
-  <%= link_to "register", users_register_path %><br>
+  <% if current_user %>
+    logged in as <%= current_user.username %><br>
+    <%= link_to 'Log Out', session_path(session), method: :delete %><br>
+  <% else %>
+    <%= link_to "log in", new_session_path %><br>
+    <%= link_to "register", users_register_path %><br>
+  <% end %>
   <% @books.each do |book| %>
     <%= link_to book do %>
       <div class="book_tile">
