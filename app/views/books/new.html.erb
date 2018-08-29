@@ -43,11 +43,8 @@
     <%= form.check_box :checked_out %>
   </div>
 
-  <div class="input-block">
-    <%= form.label :user_id %><br>
-    <%= form.number_field :user_id %>
-  </div>
- 
+  <%= form.hidden_field :user_id, :value => current_user.id %>
+
   <div class="input-block">
     <%= form.submit %>
   </div>
