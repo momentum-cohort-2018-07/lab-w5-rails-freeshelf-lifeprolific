@@ -6,14 +6,15 @@
       <nav>
       <ul class="book_tile_nav">
 
-        <%= link_to edit_book_path do %>
-          <li>edit</li>
-        <% end %>
-
-        <%= link_to book_path(@book),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } do %>
-          <li>delete</li>
+        <% if current_user %>
+          <%= link_to edit_book_path do %>
+            <li>edit</li>
+          <% end %>
+          <%= link_to book_path(@book),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } do %>
+            <li>delete</li>
+          <% end %>
         <% end %>
 
         <a href="<%= @book.url %>"><li>direct link</li></a>
