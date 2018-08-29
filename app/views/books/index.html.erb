@@ -1,5 +1,6 @@
 <main>
   <h1>Index</h1>
+  <%= link_to "register", users_register_path %><br>
   <% @books.each do |book| %>
     <%= link_to book do %>
       <div class="book_tile">
